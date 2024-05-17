@@ -1,0 +1,794 @@
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  *, *::after, *::before {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+  
+  @media (max-width: 63.9375em) {
+    .hide-for-mobile {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 64em) {
+    .hide-for-desktop{
+      display: none;
+    }
+  }
+  @keyframes slideFromTop {
+    0% {
+      transform: translateY(-200%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .slide-in{
+
+    animation: slideFromTop 1s ease;
+  }
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+
+  .visible {
+    animation: fadeIn 1s ease forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  div.headercontent {
+    height: 115px;
+    padding-bottom: 5px;
+    background-color: white;
+    position: relative;
+    z-index: 3;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    -webkit-box-shadow: 5px 5px 20px;
+            box-shadow: 5px 5px 20px;
+  }
+  
+  div.headercontent a button.viewgallery {
+    color: white;
+    background-color: green;
+    width: 150px;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13pt;
+  }
+  
+  div.overlay {
+    height: 100vh;
+    width: 0vw;
+    position: fixed;
+    z-index: 1;
+    right: 0px;
+    top: 115px;
+    background-color: black;
+    background-color: white;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  div.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 80%;
+    margin: 0px auto;
+    text-align: left;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 30px;
+  }
+  
+  div.overlay-content button {
+    color: #ebfaff;
+    text-align: left;
+    padding: 10px;
+    background-color: #325a69;
+        margin-bottom: 10px;
+    border: none;
+    font-size: 16pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 3;
+  }
+  
+  div.overlay-content button::hover {
+    background-color: lightblue;
+    color: #468096;
+  }
+  
+  div.mobilemenucontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    padding-top: 20px;
+    margin-right: 10px;
+    float: right;
+  }
+  
+  div.mobilemenu {
+    cursor: pointer;
+    padding-right: 20px;
+  }
+  
+  div.menutoggle {
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+  }
+  
+  div.menutoggle div.bar1, div.menutoggle .bar2, div.menutoggle .bar3 {
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  
+  div.menutoggle input:checked ~ div.bar1 {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+            transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  
+  div.menutoggle input:checked ~ div.bar2 {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+            transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  div.menutoggle input:checked ~ div.bar3 {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+            transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  div.menutoggle input:checked ~ .overlay {
+    width: 90%;
+  }
+  
+  a.headerlink {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  
+  a.headerviewlink {
+    float: right;
+    margin-right: 30px;
+    margin-top: 38px;
+  }
+  
+  a.closebtn {
+    position: absolute;
+    top: 22px;
+    right: 33px;
+    font-size: 60px;
+  }
+  
+  img.headerimage {
+    height: 105px;
+    width: 105px;
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+    margin-bottom:5px ;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  
+  button.viewgallery {
+    color: white;
+    background-color: green;
+    width: 150px;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13pt;
+  }
+  
+  button.navigationbuttons {
+    color: #325a69;
+    text-align: left;
+    padding: 10px;
+    background-color: maroon;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 16pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 3;
+  }
+  
+  button.navigationbuttons::hover {
+    background-color: lightblue;
+    color: #468096;
+  }
+  
+  input.menuinput {
+    display: block;
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 4;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+  
+  div.tablinks {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  
+  div.tablinks button {
+    color: #fff5af;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 0px;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12pt;
+    border-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  
+  
+  div.tablinks button.topnavbuttons::hover {
+    background-color: #a0282d;
+  }
+.tablinkbuttoncontainer{
+    width: 20%;
+}
+.button1{
+  background-color: orange;
+}
+.button2{
+  background-color: orange;
+}
+.button3{
+  background-color: rgb(185, 0, 0);
+}
+.button4{
+  background-color: orange;
+}
+.button5{
+  background-color: orange;
+}
+.mobilemenubuttoncontainer{
+  display: grid;
+  text-decoration: none;
+}
+.footer{
+  background-color: white;
+  height: 150px;
+  margin-top: 200px;
+}
+.wholefootercontainer{
+  display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.pathstoquality{
+  margin-top: 10px;
+    width: 200px;
+    height: 130px;
+
+}
+.onmywayimage{
+  height: 140px;
+  width: 140px;
+  margin-top: 5px;
+}
+.pathsimage{
+
+  width: 200px;
+  height: 130px;
+}
+.enrollmentfax{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding-left: 0%;
+}
+.enrollmentbutton{
+  justify-content: center;
+  background-color: green;
+  width: 100%;
+  color: white;
+  font-size: 14pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 0px;
+  margin-top: 40px;
+  border-radius: 10px;
+
+}
+.enrollmentbutton:hover{
+  background-color: rgb(0, 168, 0);
+}
+.faxingnumber{
+text-align: center;
+}
+a.fa {
+  font-size: 30px;
+  width: 100%;
+  height: 80px;
+  padding-top: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 30px;
+}
+a.fa:hover {
+  opacity: 0.7;
+}
+a.fa-facebook {
+  background: #3B5998;
+  color: white;
+} 
+.background{
+  background-color: rgb(185, 0, 0);
+  margin-top: 20px;
+  
+}
+div.airpump {
+  margin: 0px auto;
+  padding-top: 150px;
+  width: 800px;
+}
+div.servicesheader {
+  color: #fff5af;
+  text-align: center;
+  padding-top: 140px;
+  font-size: 26pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding-bottom: 150px;
+  padding-top: 150;
+}
+div.programbackground {
+  background-color: #c4353b;
+  margin: 20px 5% 20px 5%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+div.programservices {
+  background-color: #325a69;
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-direction: column;
+  border-radius: 10px;
+}
+div.programdotmargin {
+  background-color: #fff5af;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-right: 40%;
+  margin-top: 0px;
+}
+div.prdm {
+  background-color: #fff5af;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-left: 40%;
+  margin-top: 0px;
+}
+div.programs {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 20pt;
+  text-align: center;
+  line-height: 50px;
+  word-wrap: normal;
+  color: #fff5af;
+  flex-direction: row;
+  padding-bottom: 50px;
+  margin: 0px 10% 0px 10%;
+}
+
+img.programsimage {
+  opacity: 0.7;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  border-radius: 180px;
+  justify-content: center;
+}
+img.programsimage:hover {
+  opacity: 0.5;
+}
+
+@keyframes wipe-enter {
+  0% {
+    transform: scale(0, 0.025);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1, 0.025);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .square {
+    animation-name: wipe-enter;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .square-animation {
+    animation: wipe-enter 0.6s 1;
+    animation-delay: 0.1s;
+  }
+}
+.dots{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+.programservpics{
+  height: 250px;
+  width: 450px;
+  margin: 60px auto 40px;
+  border-radius: 10px;
+  opacity: .7;
+}
+.programservpics2{
+  height: 300px;
+  width: 450px;
+  margin: 60px auto 40px;
+  border-radius: 10px;
+  opacity: .7;
+
+}
+.programservpics3{
+  
+  
+  width: 380px;
+  margin: 60px auto 40px;
+  border-radius: 10px;
+  opacity: .7;
+}
+a.fa {
+  font-size: 30px;
+  width: 100%;
+  height: 80px;
+  padding-top: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 30px;
+}
+.desktopfacebook{
+  width: 275px;
+}
+.copyright{
+  font-size: medium;
+  background-color: rgb(145, 39, 39);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.foodinfocontainer{
+  text-align: center;
+  background-color: #325a69;
+  color: #fff5af;
+  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20pt;
+  border-radius: 10px;
+  
+
+}
+.foodinfobackground{
+  background-color: #c4353b;
+  padding: 100px;
+  border-radius: 10px;
+  margin: 10%;
+}
+.foodtext{
+  padding: 100px;
+}
+.fooddoc{
+  color: #fff5af;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20pt;
+  margin-top: 20px;
+  
+}
+.fdalegal{
+  text-align: left;
+  color: #fff5af;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14pt;
+
+}
+/*
+============VVVVVVVVV===========Mobile==========VVVVVVVVV==============
+*/
+.mobileservicesblock{
+  background-color: rgb(191, 0, 0);
+}
+
+div.mobileairpump {
+  margin: 0px auto;
+  padding-top: 90px;
+  width: 75%;
+}
+div.mobileservicesheader {
+  color: #fff5af;
+  color: #fff5af;
+  text-align: center;
+  padding-top: 0px;
+  font-size: 16pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+div.mobileprogrambackground {
+  background-color: #a0282d;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+div.mobileprogramservices {
+  background-color: #325a69;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-direction: column;
+  border-radius: 10px;
+}
+div.mobileprogramdotmargin {
+  background-color: #fff5af;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-right: 40%;
+  margin-top: 0px;
+}
+div.mobileprdm {
+  background-color: #fff5af;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-left: 40%;
+  margin-top: 0px;
+}
+div.mobileprograms {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 35px;
+  word-wrap: normal;
+  color: #fff5af;
+  flex-direction: row;
+  padding-bottom: 50px;
+  margin: 15px 5% 0px 5%;
+}
+
+img.mobileprogramsimage {
+  opacity: 0.7;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  border-radius: 180px;
+  justify-content: center;
+}
+img.mobileprogramsimage:hover {
+  opacity: 0.5;
+}
+div.mobilefooter {
+  padding: top 150px;
+  background-color: white;
+  margin-top: 200px;
+  width: 100%;
+}
+div.mobilewholefootercontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+div.mobileonmyway {
+  margin: 20px auto;
+}
+div.mobilepathstoquality {
+  margin: 20px auto;
+}
+div.mobileenrollmentfax {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-left: 0%;
+  margin: 20px auto;
+}
+div.mobilefaxingnumber {
+  text-align: center;
+}
+div.mobilesocialmediaicons {
+  margin: 20px auto;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  align-items: flex-start;
+}
+
+img.mobileonmywayimage {
+  height: 150px;
+  width: 150px;
+  margin-top: 5px;
+}
+img.mobilepathsimage {
+  margin-top: 10px;
+  width: 200px;
+  height: 130px;
+}
+
+a.mobileenrollmentbutton {
+  justify-content: center;
+  background-color: green;
+  width: 100%;
+  color: white;
+  font-size: 14pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 0px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+a.mobileenrollmentbutton:hover {
+  background-color: #009600;
+}
+a.fa {
+  font-size: 30px;
+  width: 100%;
+  height: 80px;
+  padding-top: 25px;
+  text-align: center;
+  text-decoration: none;
+}
+a.fa:hover {
+  opacity: 0.7;
+}
+a.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+div.mobileyellowdotmargin {
+  background-color: #fff5af;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-right: 30%;
+  margin-top: 80px;
+}
+div.mobileyrdm {
+  background-color: #fff5af;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-left: 30%;
+  margin-top: 80px;
+}
+div.mobiledots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+.mobileinf{
+  margin: 50px auto;
+  height: 80%;
+  width: 80%;
+  border-radius: 10px;
+  opacity: .7;
+}
+.foodtextmobile{
+  color: #fff5af;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.1em;
+  line-height: 35px;
+}
+.mobilefoodinfo{
+  background-color: #325a69;
+
+}
+.mobilefoodinfocontainer{
+  background-color: #a0282d;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.mobilefooddoc{
+  color: #fff5af;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.mobilefdalegal{
+  text-align: left;
+  font-size: 1em;
+  line-height: normal;
+  overflow-wrap: break-word;
+}
