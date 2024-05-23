@@ -94,6 +94,7 @@ html {
     font-size: 16pt;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 3;
+    border-radius: 10px;
   }
   
   div.overlay-content button::hover {

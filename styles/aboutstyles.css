@@ -26,10 +26,10 @@ body {
 }
 @keyframes slideFromTop {
   0% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 .slide-in{
@@ -53,7 +53,6 @@ body {
 div.headercontent {
   height: 115px;
   padding-bottom: 5px;
-  position: sticky;
     top: 0;
     z-index: 3;
   background-color: white;
@@ -116,6 +115,7 @@ div.overlay-content button {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   z-index: 3;
+  border-radius: 10px;
 }
 div.overlay-content button::hover {
   background-color: lightblue;
@@ -307,7 +307,8 @@ div.tablinks button.topnavbuttons::hover {
   display: grid;
   text-decoration: none;
 }
-.footer {
+.footer2 {
+  display: flex;
   background-color: white;
   height: 150px;
   margin-top: 200px;
@@ -391,6 +392,7 @@ div.aboutmission {
   text-align: center;
   padding-bottom: 50px;
   line-height: 35px;
+  margin-top: 53px;
   padding-top: 200px;
 }
 div.yellowdotmargin {
