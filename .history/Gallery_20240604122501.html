@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <meta property="og:title" content="Gallery">
+    <meta property="og:description" content="Have a peek at our gallery to see for yourself all the hapiness kindergate can provide for your family!">
+    <meta property="og:image" content="https://nebula.wsimg.com/b7ff144ccc30aa0f75b0f68574fc180a?AccessKeyId=070E06FBEECABFE2C97D&disposition=0&alloworigin=1">
+    <meta property="og:url" content="https://www.parkerswebproductions.com">
+    <meta name="color-scheme" content="light">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles/gallerystyles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/Logo.ico">
+    <style>
+        :root {
+          color-scheme: light;
+        }
+    
+        @media (prefers-color-scheme: dark) {
+          :root {
+            color-scheme: light;
+          }
+        }
+      </style>
+</head>
+<body>
+<div class="headercontent">
+    <a href="index.html" class="headerlink">
+        <img src="/assets/Logo.jpeg" alt="Kindergate Logo" class="headerimage">
+    </a>
+    <a href="/index.html" class="headerviewlink hide-for-mobile">
+        <button class="viewgallery btn">Home</button>
+    </a>
+    <div class="menutoggle hide-for-desktop">
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <div class="mobilemenucontainer hide-for-desktop">
+            <div class="mobilemenu hide-for-desktop">
+                <input type="checkbox" class="menuinput">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+
+                <div id="myNav" class="overlay">   
+                        <!-- Overlay content -->
+                    <div class="overlay-content">
+                            <a href="/index.html" class="mobilemenubuttoncontainer">
+                                <button class="navigationbuttons" >Home</button>
+                            </a>
+                            <a href="/about-us.html" class="mobilemenubuttoncontainer">
+                                <button class="navigationbuttons" >About</button>
+                            </a>
+                            <a href="/services.html" class="mobilemenubuttoncontainer">
+                                <button class="navigationbuttons" >Services</button>
+                            </a>
+                            <a href="/employment-opportunities.html" class="mobilemenubuttoncontainer">
+                                <button class="navigationbuttons" >Careers</button>
+                            </a>
+                            <a href="/learn-more.html" class="mobilemenubuttoncontainer">
+                                <button class="navigationbuttons" >Learn More</button>
+                            </a>
+                            <a href="/Gallery.html" class="mobilemenubuttoncontainer">
+                                <button class="navigationbuttons" >See Gallery!</button>
+                            </a>
+                    </div>
+                </div>
+            </div> 
+         </div>
+    </div>
+    
+</div> 
+    <div class="hide-for-mobile">
+        <div class="paddingbubble hide-for-mobile"></div>
+        <ul class="categories hide-for-mobile">
+            <li class="selected">Infants</li>
+            <li>Toddlers</li>
+            <li>Twos</li>
+            <li>Threes</li>
+            <li>PreK-2</li>
+            <li>PreK-1</li>
+        </ul>
+        <div class="backgroundcontent hide-for-mobile"></div>
+        <div class="pictures-grid hide-for-mobile"></div>   
+
+    </div>
+    <div class="hide-for-desktop">
+        <div class="paddingbubble hide-for-desktop"></div>
+        <ul class="categories hide-for-desktop">
+            <li class="selected">Infants</li>
+            <li>Toddlers</li>
+            <li>Twos</li>
+            <li>Threes</li>
+            <li>PreK-2</li>
+            <li>PreK-1</li>
+        </ul>
+        <div class="backgroundcontent hide-for-desktop"></div>
+        <div class="mobile-pictures-grid hide-for-desktop"></div>   
+
+    </div>
+
+
+      
+    <!-- Grid -->
+
+
+
+<script src="/scripts/script.js"></script>
+<script src="/scripts/galleryscript.js"></script>
+</body>
+</html>

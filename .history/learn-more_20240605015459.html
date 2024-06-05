@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light">
+    <meta property="og:title" content="Learn More">
+    <meta property="og:description" content="Learn more about the services we offer and what we can do for your family!">
+    <meta property="og:image" content="https://nebula.wsimg.com/b7ff144ccc30aa0f75b0f68574fc180a?AccessKeyId=070E06FBEECABFE2C97D&disposition=0&alloworigin=1">
+    <meta property="og:url" content="https://www.parkerswebproductions.com">
+    <meta name="color-scheme" content="light">
+    <title>Kindergate Childcare</title>
+    <link rel="stylesheet" href="styles/learnstyles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/Logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+  
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: light;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="headercontent">
+      <a href="index.html" class="headerlink">
+        <img
+          src="/assets/Logo.jpeg"
+          alt="Kindergate Logo"
+          class="headerimage"
+        />
+      </a>
+      
+      <a href="/Gallery.html" class="headerviewlink hide-for-mobile">
+        <button class="viewgallery btn hover:shadow-xl">View Gallery</button>
+      </a>
+      <div class="menutoggle hide-for-desktop">
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <div class="mobilemenucontainer hide-for-desktop">
+          <div class="mobilemenu hide-for-desktop">
+            <input type="checkbox" class="menuinput" name="checkboxlistener" />
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+
+            <div id="myNav" class="overlay">
+              <!-- Overlay content -->
+              <div class="overlay-content">
+                <a href="/index.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">Home</button>
+                </a>
+                <a href="/about-us.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">About</button>
+                </a>
+                <a href="/services.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">Services</button>
+                </a>
+                <a
+                  href="/employment-opportunities.html"
+                  class="mobilemenubuttoncontainer"
+                >
+                  <button class="navigationbuttons">Careers</button>
+                </a>
+                <a href="/learn-more.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">Learn More</button>
+                </a>
+                <a href="/Gallery.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">See Gallery!</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tablinkscontainer hide-for-mobile">
+        <div class="tablinks">
+          <a href="/index.html" class="tablinkbuttoncontainer">
+            <button class="topnavbutton button1">Welcome</button>
+          </a>
+          <a href="/about-us.html" class="tablinkbuttoncontainer">
+            <button class="topnavbutton button2">About Us</button>
+          </a>
+          <a href="/services.html" class="tablinkbuttoncontainer">
+            <button class="topnavbutton button3">Services</button>
+          </a>
+          <a
+            href="/employment-opportunities.html"
+            class="tablinkbuttoncontainer"
+          >
+            <button class="topnavbutton button4">Careers</button>
+          </a>
+          <a href="/learn-more.html" class="tablinkbuttoncontainer">
+            <button class="topnavbutton button5">Learn More</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="background hide-for-mobile">
+      <div class="desktoplearnmorecontainer">
+        <div class="desktoplearnmoreheader">Here's some more info!</div>
+        <div class="desktoplearnmorebulletin animate-bounce">
+          <div class="desktoplmbhc">
+            <div class="desktoplearnmorebulletinheader">Send Us A Note</div>
+            <div class="desktoplearnmorebulletinheader">Maps & Info</div>
+          </div>
+          <div class="desktoplmbc">
+            <div class="desktoplmc1">
+              <div class="desktoplminputs">
+                <form
+                  action="/contactform.php"
+                  method="POST"
+                  class="learnmoreform"
+                >
+                  <div class="desktoplminputpos">
+                    <label class="lmlabels"> Name: </label>
+                    <input name="name" type="text" class="lminputs desktop" />
+                  </div>
+                  <div class="desktoplminputpos">
+                    <label class="lmlabels"> Email: </label>
+                    <input name="mail" type="text" class="lminputs desktop" />
+                  </div>
+                  <div class="desktoplminputpos">
+                    <label class="lmlabels"> Subject: </label>
+                    <input
+                      name="subject"
+                      type="text"
+                      class="lminputs desktop"
+                    />
+                  </div>
+                  <div class="desktoplminputpos">
+                    <label class="lmlabels"> Message: </label>
+                    <textarea
+                      name="message"
+                      class="lminputs messageinput"
+                    ></textarea>
+                  </div>
+                  <div class="desktoplminputpos">
+                    <input
+                      name="submit"
+                      type="submit"
+                      class="lminputs submitinput"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="desktoplmc2">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100703.10600285827!2d-87.61784313927117!3d37.93108310793016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886e2d46287337b9%3A0x9153da594514816a!2sKindergate%20Developmental%20Center!5e0!3m2!1sen!2sus!4v1646288946875!5m2!1sen!2sus"
+                width="400"
+                height="300"
+                style="border: 0; margin-top: 40px"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+              <br />
+              <p>
+                8100 Robin Hill Road Newburgh IN 47630
+                <br />
+
+                Phone number: 812-858-9181
+                <br />
+                Fax number: 812-518-3449
+                <br />
+                <a
+                  href="mailto:director.newburgh@kindergatechildcare.com"
+                  target="_blank"
+                  >director.newburgh@kindergatechildcare.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="wholefootercontainer">
+          <div class="onmyway">
+            <img
+              src="assets/onmyway.jpg"
+              alt="On My Way Pre-k"
+              class="onmywayimage"
+            />
+          </div>
+          <div class="pathstoquality">
+            <img
+              src="assets/pathstoquality.jpg"
+              alt="Paths To Quality"
+              class="pathsimage"
+            />
+          </div>
+          <div class="enrollmentfax">
+            <a href="/learn-more.html" class="enrollmentbutton">Enrollment</a>
+            <div class="faxingnumber">Fax Number: 812-518-3449</div>
+          </div>
+          <div class="socialmediaicons">
+            <div class="desktopfacebook">
+              <a
+                href="https://www.facebook.com/groups/480383766662011"
+                class="fa fa-facebook"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        Copyright 2013. Kindergate Developmental Childcare, INC.. All rights
+        reserved.
+      </div>
+    </div>
+    <div class="mobilebackground hide-for-desktop">
+
+        <div class="mobilelearnmoreheader">
+            Here's some more info!
+        </div>
+        <div class="mobilelearnmorebulletin bounce">
+           <div class="mobilelearnmorebulletinheader1">Send Us A Note</div>
+           <form action="/contactform.php" method="POST" class="learnmoreform">
+               <div class="mobilelminputpos">
+                   <label class="lmlabels">
+                       Name:
+                       </label>
+                       <input name="name"type="text" class="mobilelminputs mobile">
+               </div>
+               <div class="mobilelminputpos">
+                   <label class="lmlabels">
+                       Email:
+                       </label>
+                       <input  name="mail" type="text" class="mobilelminputs mobile">
+               </div>
+               <div class="mobilelminputpos">
+                   <label  class="lmlabels">
+                      Subject:
+                       </label>
+                       <input name="subject"type="text" class="mobilelminputs mobile">
+               </div>
+               <div class="mobilelminputpos">
+                   <label class="lmlabels">
+                       Message:
+                       </label>
+                       <textarea name="message" class="mobilelminputs mobilemessageinput"></textarea>
+               </div>
+               <div class="mobilelminputpos">
+
+                       <input name="submit"type="submit" class="mobilelminputs submitinput">
+               </div>
+           </form>
+           <div class="mobilelearnmorebulletinheader2">Maps & Info</div>
+           <iframe class="mobileiframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100703.10600285827!2d-87.61784313927117!3d37.93108310793016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886e2d46287337b9%3A0x9153da594514816a!2sKindergate%20Developmental%20Center!5e0!3m2!1sen!2sus!4v1646288946875!5m2!1sen!2sus" width="100%" height="300" style="border:0;margin:0 auto;" allowfullscreen="" loading="lazy"></iframe>
+           <div class="lmmc">
+               <p>
+                   8100 Robin Hill Road Newburgh IN 47630
+                   <br>
+                   Phone number: 812-858-9181
+                   <br>
+                   Fax number: 812-518-3449    
+                   <br>
+                   <a class="mailtolink" href="mailto:director.newburgh@kindergatechildcare.com" target="_blank">director.newburgh@kindergatechildcare.com</a>
+               </p>
+           </div>
+        </div>
+
+        <div class="mobilefooter hide-for-desktop">
+            <div class="mobilewholefootercontainer">
+                <div class="mobileonmyway">
+                    <img src="assets/onmyway.jpg" alt="On My Way Pre-k" class="mobileonmywayimage">
+                </div>
+                <div class="mobilepathstoquality">
+                    <img src="assets/pathstoquality.jpg" alt="Paths To Quality" class="mobilepathsimage">
+                </div>
+                <div class="mobileenrollmentfax">
+                       <a href="/learn-more.html" class="mobileenrollmentbutton">Enrollment</a>
+                     <div class="mobilefaxingnumber">Fax Number: 812-518-3449</div>
+                </div>
+                <div class="mobilesocialmediaicons">
+                 <a href="https://www.facebook.com/groups/480383766662011/about" class="fa fa-facebook"></a>
+                </div>
+                
+                
+            </div>
+         </div>
+         <div class="copyright">
+            Copyright 2013. Kindergate Developmental Childcare, INC.. All rights
+            reserved.
+          </div>
+
+    </div>
+
+    <script src="/scripts/learn.js">
+    
+    
+    
+    </script>
+  </body>
+</html>

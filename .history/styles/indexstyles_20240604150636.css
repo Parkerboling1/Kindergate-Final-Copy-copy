@@ -1,0 +1,937 @@
+html {
+  -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+  scrollbar-width: 20px;
+  scrollbar-color: #325a69 #325a69;
+  
+}
+
+
+  *, *::after, *::before {
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+  }
+  .startbutton{
+    margin-top: 400px;
+  }
+  .downarrow{
+    margin-top: 200px;
+    rotate: 90deg;
+  }
+  @media (max-width: 63.9375em) {
+    .hide-for-mobile {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 64em) {
+    .hide-for-desktop {
+      display: none;
+    }
+  }
+
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes fade-in{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+
+  }
+  .hidden{
+    opacity: 0;
+
+  }
+  .visible{
+    opacity: 1;
+    animation: fade-in 1s ease;
+  }
+  .piccontainer{
+    position: relative;
+    width: 100%;
+    background-image: url('/assets/prek1b/kids5.jpg');
+    animation: fade-in 1s ease;
+
+  }
+  .fade-in{
+    animation: fade-in 1s ease;
+  }
+  .backgroundcolor{
+    background-color: #28b1ff;
+  }
+  
+
+  .headertext {
+    position: absolute;
+    top: 50%; /* Adjust to vertically center the text */
+    left: 50%; /* Adjust to horizontally center the text */
+    
+    color: rgb(0, 162, 255); /* Adjust text color */
+    
+
+    background-color: rgba(255, 255, 255, 0.908); /* Adjust background color */
+    border-radius: 15px;
+    font-size: .6em; /* Adjust font size */
+    font-weight: bold; /* Adjust font weight */
+
+    z-index: 2; /* Adjust font size */
+    font-weight: bold; /* Adjust font weight */
+    text-align: center; /* Adjust text alignment */
+   /* Adjust background color and opacity */
+    padding: 10px 20px; /* Adjust padding */
+  }
+  .slide-in{
+
+    animation: slideFromLeft 1s ease;
+  }
+  .slide-in-delay{
+
+    animation: slideFromLeft 2s ease;
+  }
+  .mtop{
+    margin-top: -25px;
+  }
+  div.headercontent {
+    height: 115px;
+    padding-bottom: 10px;
+    background-color: white;
+    top: 0;
+    z-index: 3;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    -webkit-box-shadow: 5px 5px 20px;
+            box-shadow: 5px 5px 20px;
+  }
+  
+  div.headercontent a button.viewgallery {
+    color: white;
+    background-color: green;
+    width: 150px;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13pt;
+  }
+  
+  div.overlay {
+    height: 100vh;
+    width: 0vw;
+    position: fixed;
+    z-index: 1;
+    right: 0px;
+    top: 115px;
+    background-color: black;
+    background-color: white;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  div.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 80%;
+    margin: 0px auto;
+    text-align: left;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 30px;
+  }
+  
+  div.overlay-content button {
+    color: #ebfaff;
+    text-align: left;
+    padding: 10px;
+    background-color: #325a69;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 16pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 3;
+    border-radius: 10px;
+  }
+  
+  div.overlay-content button::hover {
+    background-color: lightblue;
+    color: #468096;
+  }
+  
+  div.mobilemenucontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    padding-top: 20px;
+    margin-right: 10px;
+    float: right;
+  }
+  
+  div.mobilemenu {
+    cursor: pointer;
+    padding-right: 20px;
+  }
+  
+  div.menutoggle {
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+  }
+  
+  div.menutoggle div.bar1, div.menutoggle .bar2, div.menutoggle .bar3 {
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  
+  div.menutoggle input:checked ~ div.bar1 {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+            transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  
+  div.menutoggle input:checked ~ div.bar2 {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+            transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  div.menutoggle input:checked ~ div.bar3 {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+            transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  div.menutoggle input:checked ~ .overlay {
+    width: 90%;
+  }
+  
+  a.headerlink {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  
+  a.headerviewlink {
+    float: right;
+    margin-right: 30px;
+    margin-top: 38px;
+  }
+  
+  a.closebtn {
+    position: absolute;
+    top: 22px;
+    right: 33px;
+    font-size: 60px;
+  }
+  
+  img.headerimage {
+    height: 105px;
+    width: 105px;
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+    margin-bottom:5px ;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  
+  button.viewgallery {
+    color: white;
+    background-color: green;
+    width: 150px;
+    height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13pt;
+  }
+  
+  button.navigationbuttons {
+    color: #325a69;
+    text-align: left;
+    padding: 10px;
+    background-color: maroon;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 16pt;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 3;
+  }
+  
+  button.navigationbuttons::hover {
+    background-color: lightblue;
+    color: #468096;
+  }
+  
+  input.menuinput {
+    display: block;
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    right: 0px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 4;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+  
+  div.tablinks {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  
+  div.tablinks button {
+    color: #fff5af;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 0px;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12pt;
+    border-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  
+  
+  div.tablinks button.topnavbuttons::hover {
+    background-color: #a0282d;
+  }
+.tablinkbuttoncontainer{
+    width: 20%;
+}
+.button1{
+  background-color: orange;
+}
+.button2{
+  background-color: rgb(0, 162, 255);
+}
+.button3{
+  background-color: rgb(0, 162, 255);
+}
+.button4{
+  background-color: rgb(0, 162, 255);
+}
+.button5{
+  background-color: rgb(0, 162, 255);
+}
+.mobilemenubuttoncontainer{
+  display: grid;
+  text-decoration: none;
+}
+.welcomebackground{
+ background-color: #28b1ff;
+margin-top: 50px;
+ 
+
+}
+
+.blender{
+  background: linear-gradient(to top,#28b1ff 20%,#00960000 80%);
+  height: 100vh;
+  
+  margin-top: -100vh;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+.welcomeheader{
+  margin-top: 20px ;
+  text-align: center;
+  font-size: 52pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(254, 254, 254);
+  
+  font-weight: bolder;
+  padding-top: 34px;
+ 
+}
+.welcomeheader2{
+  background-image: url('/assets/prek1b/kids5.jpg');
+  background-size: cover;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: calc(linear, 100% 100%);
+  background-blend-mode:overlay;
+  background-repeat: no-repeat;
+  text-align: center;
+  opacity: 1;
+  background-color: rgb(0, 162, 255);
+  font-size: 20pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(254, 254, 254);
+  
+  font-weight: bolder;
+  padding-top: 180px;
+  padding-bottom: 130px;
+  animation: fade-in 1s ease forwards;
+}
+.headertext2{
+    
+  background-color: rgba(255, 255, 255, 0.875);
+    border-radius: 15px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -65px;
+    margin-left: 5%;
+    /* text-align: center; */
+    font-size: 1.5em;
+    max-width: 350px;
+    font-weight: bold;
+    color: rgb(0, 162, 255);
+    padding: 10px 20px;
+    text-align: center;
+}
+div.tabssection {
+  display: flex;
+}
+button.buttoncities {
+  width: 100%;
+  height: 50px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 14pt;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+ 
+  background-color: rgb(23, 131, 255);;
+  color: #fff5af;
+  border: none;
+}
+.tabbackground{
+  background-color: rgb(193, 193, 193);;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  border-radius: 10px;
+  box-shadow: -2px 5px 7px;
+  max-width: 1200px;
+  position: relative;
+  
+ 
+  
+}
+div.cities{
+  background-color: rgb(0,117,255, 1);
+  height: 100%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-bottom: 5px;
+  
+}
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+.kindergateimage{
+  width: 100%;
+  border-radius: 15px;
+  border: #229ce3 4px solid;
+  
+
+}
+.newburghkindergate{
+  justify-content: center;
+  margin: 0px 5%;
+  padding: 10% 10% 4% 10%;
+}
+.toptext{
+  color: #fff5af;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 30pt;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+.tabsbulletin {
+  background-color: #fff5af;
+  height: 500px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.dots{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+.dotmargin {
+  background-color: #325a69;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-right: 40%;
+}
+.rightdotmargin {
+  background-color: #325a69;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-left: 40%;
+}
+.hours{
+  text-align: center;
+  color: maroon;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 18pt;
+  padding-top: 30px;
+}
+.blender2{
+  background: linear-gradient(to top, #fefefe60, rgba(255, 166, 0, 0));
+  height: 300px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  margin-top: -300px;
+}
+.cardwidth{
+  width: 30rem ;
+}
+.hourssection{
+  
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-right: 5%;
+  margin-left: 5%;
+  height: 600px;
+  
+
+}
+.location{
+  text-align: center;
+  color: maroon;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 18pt;
+  padding-top: 30px;
+}
+.contact{
+  text-align: center;
+  color: maroon;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 18pt;
+  padding-top: 30px;
+}
+.email{
+  text-align: center;
+  color: maroon;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 18pt;
+  word-wrap: normal;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+.char-rot{
+  text-transform: rotate(90px);
+
+}
+/*=================================vvvv=======Footer========vvvv=============================*/
+.footer2{
+  background-color: white;
+  height: 150px;
+  margin-top: 200px;
+  
+ 
+}
+.wholefootercontainer{
+  display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: col;
+}
+
+.pathstoquality{
+  margin-top: 10px;
+    width: 200px;
+    height: 130px;
+
+}
+.onmywayimage{
+  height: 140px;
+  width: 140px;
+  margin-top: 5px;
+}
+.pathsimage{
+
+  width: 200px;
+  height: 130px;
+}
+.enrollmentfax{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding-left: 0%;
+}
+.enrollmentbutton{
+  justify-content: center;
+  background-color: green;
+  width: 100%;
+  color: white;
+  font-size: 14pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 0px;
+  margin-top: 40px;
+  border-radius: 10px;
+
+}
+.enrollmentbutton:hover{
+  background-color: rgb(0, 168, 0);
+}
+.faxingnumber{
+text-align: center;
+}
+a.fa {
+  font-size: 30px;
+  width: 100%;
+  height: 70px;
+  padding-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 40px;
+}
+a.fa:hover {
+  opacity: 0.7;
+}
+a.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.copyright{
+  font-size: medium;
+  background-color: rgb(145, 39, 39);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+div.aboutbulletin {
+  background-color: #fff5af;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 10px;
+  margin-top: 100px;
+  padding-top: 30px;
+}
+
+/*
+=====================VVVVVVVVVVVV==============MOBILE=============VVVVVVVVVVV===================
+*/
+.mobilewelcomebackground{
+  background: linear-gradient(#28b1ff 50% , #ffffff 60%,#ffffff 70%, #28b1ff 80%);
+  
+}
+div.mobilewelcomeheader {
+  text-align: center;
+  font-size: 24pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-weight: bolder;
+  padding-top: 130px;
+  padding-bottom: 100px;
+}
+div.mobilebackground {
+  background-color: rgb(0, 162, 255);
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 100px;
+  border-radius: 10px;
+  box-shadow: -2px 5px 7px;
+}
+
+div.mobiletabssection {
+  display: flex;
+}
+div.mobilecities {
+  height: 100%;
+  background-color: rgb(0,117,255, 1);
+  width: 100%;
+}
+div.mobilecities.evansville {
+  background-color: rgb(0,117,255, 1);
+  border-radius: 10px;
+  height: 100%;
+}
+div.mobilecities.newburgh {
+  background-color: rgb(0,117,255, 1);
+  border-radius: 10px;
+  height: 100%;
+}
+div.mobilenewburghkindergate {
+  justify-content: center;
+  padding: 10% 5% 5% 5%;
+}
+div.mobilenewburghkindergate img.mobilekindergateimage {
+  width: 100%;
+  border-radius: 15px;
+}
+div.mobiletoptext {
+  color: #fff5af;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 24pt;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+div.mobiletabsbulletin {
+  background-color: #fff5af;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+div.mobilehours {
+  text-align: center;
+  color: maroon;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2em;
+  padding: 30px 5px 0px;
+}
+div.mobilelocation {
+  text-align: center;
+  color: maroon;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2em;
+  padding: 30px 5px 0px;
+}
+div.mobilecontact {
+  text-align: center;
+  color: maroon;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2em;
+  padding: 30px 5px 0px;
+}
+div.mobileemail {
+  text-align: center;
+  color: maroon;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.01em;
+  word-wrap: normal;
+  padding: 15px 5px 70px;
+}
+div.mobiletabsbulletinpos {
+  justify-content: center;
+  padding-bottom: 5px;
+}
+div.mobiledots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
+div.mobiledotmargin {
+  background-color: #325a69;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-right: 40%;
+}
+div.mobilerightdotmargin {
+  background-color: #325a69;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  margin-left: 40%;
+}
+div.mobilefooter {
+  padding: top 150px;
+  background-color: white;
+  margin-top: 200px;
+  width: 100%;
+}
+div.mobilewholefootercontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+div.mobileonmyway {
+  margin: 20px auto;
+}
+div.mobilepathstoquality {
+  margin: 20px auto;
+}
+div.mobileenrollmentfax {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-left: 0%;
+  margin: 20px auto;
+}
+div.mobilefaxingnumber {
+  text-align: center;
+}
+div.mobilesocialmediaicons {
+  margin: 20px auto;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  align-items: flex-start;
+}
+
+img.mobileonmywayimage {
+  height: 150px;
+  width: 150px;
+  margin-top: 5px;
+}
+img.mobilepathsimage {
+  margin-top: 10px;
+  width: 200px;
+  height: 130px;
+}
+
+a.mobileenrollmentbutton {
+  justify-content: center;
+  background-color: green;
+  width: 100%;
+  color: white;
+  font-size: 14pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 0px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+a.mobileenrollmentbutton:hover {
+  background-color: #009600;
+}
+
+a.fa:hover {
+  opacity: 0.7;
+}
+a.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+a.mobilecontactcall {
+  margin: 5% 10% 5%;
+  display: flow-root;
+  padding: 5%;
+  text-align: center;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 12pt;
+  border-radius: 180px;
+}
+.desktopfacebook{
+  width: 275px;
+}
+.kindergatemodo2{
+  
+  padding: 100px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  color: white;
+  text-align: center;
+}
+.undermodo{
+ 
+  background-size:contain;
+  background-repeat: round;
+  width: 100%;
+  height: 300px;
+  
+  background-color: #ffffff51;
+  background-image: url(/assets/prek1b/kids2.jpeg);
+  background-blend-mode: overlay;
+}
+.undermodoblender{
+  background: linear-gradient(to top, #b2e0ff, #2db2ff);
+  height: 300px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  margin-top: -300px;
+
+}
+.aboutuslinkcon{
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.aboutuslink{
+  color: white;
+  font-size: 20pt;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: #4c4c4c5f;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}

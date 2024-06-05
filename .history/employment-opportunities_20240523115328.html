@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light">
+    <meta property="og:title" content="Careers">
+    <meta property="og:description" content="Join our team today!">
+    <meta property="og:image" content="https://nebula.wsimg.com/b7ff144ccc30aa0f75b0f68574fc180a?AccessKeyId=070E06FBEECABFE2C97D&disposition=0&alloworigin=1">
+    <meta property="og:url" content="https://www.parkerswebproductions.com">
+    <meta name="color-scheme" content="light">
+    <title>Kindergate Childcare</title>
+    <link rel="stylesheet" href="styles/employstyles.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/Logo.ico">
+    <style>
+      :root {
+        color-scheme: light;
+      }
+  
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: light;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="headercontent">
+      <a href="index.html" class="headerlink">
+        <img
+          src="/assets/Logo.jpeg"
+          alt="Kindergate Logo"
+          class="headerimage"
+        />
+      </a>
+      
+      <a href="/Gallery.html" class="headerviewlink hide-for-mobile">
+        <button class="viewgallery">View Gallery</button>
+      </a>
+      <div class="menutoggle hide-for-desktop">
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <div class="mobilemenucontainer hide-for-desktop">
+          <div class="mobilemenu hide-for-desktop">
+            <input type="checkbox" class="menuinput" name="checkboxlistener" />
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+
+            <div id="myNav" class="overlay">
+              <!-- Overlay content -->
+              <div class="overlay-content">
+                <a href="/index.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">Home</button>
+                </a>
+                <a href="/about-us.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">About</button>
+                </a>
+                <a href="/services.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">Services</button>
+                </a>
+                <a
+                  href="/employment-opportunities.html"
+                  class="mobilemenubuttoncontainer"
+                >
+                  <button class="navigationbuttons">Careers</button>
+                </a>
+                <a href="/learn-more.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">Learn More</button>
+                </a>
+                <a href="/Gallery.html" class="mobilemenubuttoncontainer">
+                  <button class="navigationbuttons">See Gallery!</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tablinkscontainer hide-for-mobile">
+        <div class="tablinks">
+          <a href="/index.html" class="tablinkbuttoncontainer">
+            <button class="topnavbutton button1">Welcome</button>
+          </a>
+          <a href="/about-us.html" class="tablinkbuttoncontainer">
+            <button class="topnavbutton button2">About Us</button>
+          </a>
+          <a href="/services.html" class="tablinkbuttoncontainer">
+            <button class="topnavbutton button3">Services</button>
+          </a>
+          <a
+            href="/employment-opportunities.html"
+            class="tablinkbuttoncontainer"
+          >
+            <button class="topnavbutton button4">Careers</button>
+          </a>
+          <a href="/learn-more.html" class="tablinkbuttoncontainer">
+            <button class="topnavbutton button5">Learn More</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="background hide-for-mobile">
+      <div class="formbackground hide-for-mobile">
+        <div class="careerformheader">Apply Here:</div>
+        <div class="formpaper slide-in">
+          <form action="/applicants.php" method="POST" id="form">
+            <div class="desktopcareersformrow row-1">
+              <label for="name">Facility You Are Applying To:</label>
+              <select required class="careersinput1 desktop" name="facility">
+                <option value="Newburgh">Newburgh</option>
+                <option value="Evansville">Evansville</option>
+              </select>
+            </div>
+            <div class="desktopcareersformrow row-2">
+              <div class="desktopcareersformcolumn column-1">
+                <label for="name">First:</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="First Name"
+                  class="careersinput1 desktop"
+                  name="firstname"
+                />
+              </div>
+              <div class="desktopcareersformcolumn column-2">
+                <label for="name">Last:</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Last Name"
+                  class="careersinput1 desktop"
+                  name="lastname"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-3">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Email:</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Email"
+                  class="careersinput1 desktop"
+                  name="email"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-4">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Phone:</label>
+                <input
+                  type="number"
+                  required
+                  placeholder="Phone Number:"
+                  class="careersinput1 desktop"
+                  name="phone"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-5">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Address:</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Full Address"
+                  class="careersinput1 desktop"
+                  name="address"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-6">
+              <div class="desktopcareersformcolumn">
+                <label for="name">DOB:</label>
+                <input
+                  type="date"
+                  required
+                  placeholder="Full Name"
+                  class="careersinput1 desktop"
+                  name="dob"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-7">
+              <div class="desktopcareersformcolumn column-1">
+                <label for="name">Have You Applied Before:</label>
+                <select required class="careersinput1 desktop" name="applied">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-8">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Hours Available:</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="available"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-9">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Able to work OverTime</label>
+                <select required class="careersinput1 desktop" name="overtime">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-10">
+              <div class="desktopcareersformcolumn">
+                <label for="name">When Can You Start?</label>
+                <input
+                  type="date"
+                  required
+                  placeholder="Full Name"
+                  class="careersinput1 desktop"
+                  name="startdate"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-11">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Expected Pay:</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="expected"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-12">
+              <div class="desktopcareersformcolumn">
+                <label for="name"
+                  >Are you legally eligible for employment in the US?
+                </label>
+                <select required class="careersinput1 desktop" name="eligible">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-13">
+              <div class="desktopcareersformcolumn">
+                <label for="name"
+                  >Have you been convicted of a crime in the past ten
+                  years?</label
+                >
+                <select required class="careersinput1 desktop" name="crime">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-14">
+              <div class="desktopcareersformcolumn">
+                <label for="name">If Yes Please Explain:</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="explaination"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-15">
+              <div class="desktopcareersformcolumn">
+                <label for="name"
+                  >Please list professional organizations you have been a part
+                  of:</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="organizations"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-16">
+              <div class="desktopcareersformcolumn">
+                <label for="name"
+                  >Please list special skills related to childcare:</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="skills"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-17">
+              <div class="desktopcareersformcolumn">
+                <label for="name"
+                  >Please list any volunteer work you have done:</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="volunteer"
+                />
+              </div>
+            </div>
+
+            <div class="desktopcareersformrow row-18">
+              <div class="desktopcareersformcolumn">
+                <label for="name">High School (name and location):</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="highschool"
+                />
+              </div>
+            </div>
+
+            <div class="desktopcareersformrow row-19">
+              <div class="desktopcareersformcolumn">
+                <label for="name">High School Graduation Date</label>
+                <input
+                  type="date"
+                  required
+                  class="careersinput1 desktop"
+                  name="graduation"
+                />
+              </div>
+            </div>
+
+            <div class="desktopcareersformrow row-20">
+              <div class="desktopcareersformcolumn">
+                <label for="name">College (name and location):</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="college"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-21">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Course of study:</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="course"
+                />
+              </div>
+            </div>
+
+            <div class="desktopcareersformrow row-22">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Did you graduate?</label>
+                <select required class="careersinput1 desktop" name="graduated">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="desktopcareersformrow row-23">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Degree:</label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="degree"
+                />
+              </div>
+            </div>
+
+            <div class="desktopcareersformrow row-24">
+              <div class="desktopcareersformcolumn">
+                <label for="name"
+                  >Previous Employment (most recent first):</label
+                >
+                <textarea
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter Text Here"
+                  name="employer"
+                  class="desktop"
+                ></textarea>
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-25">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Previous Employment :</label>
+                <textarea
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter Text Here"
+                  name="secondemployer"
+                  class="desktop"
+                ></textarea>
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-26">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Previous Employment :</label>
+                <textarea
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter Text Here"
+                  name="thirdemployer"
+                  class="desktop"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="desktopcareersformrow row-27">
+              <div class="desktopcareersformcolumn">
+                <label for="name"
+                  >THE INFORMATION PROVIDED IN THIS APPLICATION FOR EMPLOYMENT
+                  IS TRUE, CORRECT, AND COMPLETE. IF EMPLOYED, ANY
+                  MISREPRESENTATION OF FACT MAY RESULT IN MY TERMINATION.</label
+                >
+                <input
+                  type="checkbox"
+                  required
+                  class="careersinput1 checkbox desktop"
+                  name="truthful"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-28">
+              <div class="desktopcareersformcolumn">
+                <label for="name"
+                  >Electronically sign this application here:</label
+                >
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Text Here"
+                  class="careersinput1 desktop"
+                  name="signature"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-29">
+              <div class="desktopcareersformcolumn">
+                <label for="name">Date:</label>
+                <input
+                  type="date"
+                  required
+                  class="careersinput1 desktop"
+                  name="date"
+                />
+              </div>
+            </div>
+            <div class="desktopcareersformrow row-30">
+              <div class="desktopcareersformcolumn">
+                <input
+                  type="submit"
+                  required
+                  class="careerssubmit desktop"
+                  name="submit"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="wholefootercontainer">
+          <div class="onmyway">
+            <img
+              src="assets/onmyway.jpg"
+              alt="On My Way Pre-k"
+              class="onmywayimage"
+            />
+          </div>
+          <div class="pathstoquality">
+            <img
+              src="assets/pathstoquality.jpg"
+              alt="Paths To Quality"
+              class="pathsimage"
+            />
+          </div>
+          <div class="enrollmentfax">
+            <a href="/learn-more.html" class="enrollmentbutton">Enrollment</a>
+            <div class="faxingnumber">Fax Number: 812-518-3449</div>
+          </div>
+          <div class="socialmediaicons">
+            <div class="desktopfacebook">
+              <a
+                href="https://www.facebook.com/groups/480383766662011"
+                class="fa fa-facebook"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        Copyright 2013. Kindergate Developmental Childcare, INC.. All rights
+        reserved.
+      </div>
+      
+    </div>
+    <div class="mobilebackground hide-for-desktop">
+        <div class="careersheader">
+            Apply Here: 
+        </div>
+         <div class="formbackground hide-for-desktop">
+            <div class="mobileformpaper">
+                <form action="/applicants.php" method="POST" id="form">
+                    <div class="mobilecareersformrow mobilerow-1">
+                        <label for="name">Facility You Are Applying To:</label>
+                            <select required class="careersinput1 mobile" name="facility">
+                                <option value="Newburgh">Newburgh</option>
+                                <option value="Evansville">Evansville</option>
+                            </select>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-2">
+                        <div class="mobilecareersformcolumn column-1">
+                            <label for="name">First:</label>
+                            <input type="text" required placeholder="First Name" class="careersinput1 mobile" name="firstname">
+                        </div>
+                        <div class="mobilecareersformcolumn column-2">
+                            <label for="name">Last:</label>
+                            <input type="text" required placeholder="Last Name" class="careersinput1 mobile"name="lastname">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-3">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Email:</label>
+                            <input type="text" required placeholder="Email" class="careersinput1 mobile"name="email">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-4">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Phone:</label>
+                            <input type="number" required placeholder="Phone Number:" class="careersinput1 mobile"name="phone">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-5">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Address:</label>
+                            <input type="text" required placeholder="Full Address" class="careersinput1 mobile"name="address">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-6">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">DOB:</label>
+                            <input type="date" required placeholder="Full Name" class="careersinput1 mobile"name="dob">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-7">
+                        <div class="mobilecareersformcolumn column-1">
+                            <label for="name">Have You Applied Before:</label>
+                            <select required class="careersinput1 mobile"name="applied">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-8">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Hours Available:</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="available">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-9">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Able to work OverTime</label>
+                            <select required class="careersinput1 mobile"name="overtime">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-10">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">When Can You Start?</label>
+                            <input type="date" required placeholder="Full Name" class="careersinput1 mobile" name="startdate">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-11">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Expected Pay:</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="expected">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-12">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Are you legally eligible for employment in the US? </label>
+                            <select required class="careersinput1 mobile"name="eligible">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-13">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Have you been convicted of a crime in the past ten years?</label>
+                            <select required  class="careersinput1 mobile"name="crime">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-14">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">If Yes Please Explain:</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="explaination">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-15">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Please list professional organizations you have been a part of:</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="organizations">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-16">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Please list special skills related to childcare:</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="skills">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-17">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Please list any volunteer work you have done:</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="volunteer">
+                        </div>
+                    </div>
+                    
+                    <div class="mobilecareersformrow mobilerow-18">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">High School (name and location):</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="highschool">
+                        </div>
+                    </div>
+                    
+                    <div class="mobilecareersformrow mobilerow-19">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">High School Graduation Date</label>
+                            <input type="date" required  class="careersinput1 mobile"name="graduation">
+                        </div>
+                    </div>
+                    
+                    <div class="mobilecareersformrow mobilerow-20">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">College (name and location):</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="college">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-21">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Course of study:</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="course">
+                        </div>
+                    </div>
+
+                    <div class="mobilecareersformrow mobilerow-22">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Did you graduate?</label>
+                            <select required  class="careersinput1 mobile"name="graduated">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mobilecareersformrow mobilerow-23">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Degree:</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="degree">
+                        </div>
+                    </div>
+                    
+                    <div class="mobilecareersformrow mobilerow-24">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Previous Employment (most recent first):</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Enter Text Here"name="1employer"class="mobile"></textarea>
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-25">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Previous Employment :</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Enter Text Here"name="2employer"class="mobile"></textarea>
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-26">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Previous Employment :</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Enter Text Here"name="3employer"class="mobile"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mobilecareersformrow mobilerow-27">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">THE INFORMATION PROVIDED IN THIS APPLICATION FOR EMPLOYMENT IS TRUE, CORRECT, AND COMPLETE. IF EMPLOYED, ANY MISREPRESENTATION OF FACT MAY RESULT IN MY TERMINATION.</label>
+                            <input type="checkbox" required  class="mobilecheckbox careersinput1 checkbox mobile"name="truthful">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-28">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Electronically sign this application here:</label>
+                            <input type="text" required placeholder="Enter Text Here" class="careersinput1 mobile"name="signature">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-29">
+                        <div class="mobilecareersformcolumn">
+                            <label for="name">Date:</label>
+                            <input type="date" required  class="careersinput1 mobile"name="date">
+                        </div>
+                    </div>
+                    <div class="mobilecareersformrow mobilerow-30">
+                        <div class="mobilecareersformcolumn">
+                            <input type="submit" required  class="careerssubmit mobilesubmit"name="submit">
+                        </div>
+                    </div>
+
+
+
+                </form>
+
+
+            </div>
+         </div>
+         <div class="mobilefooter hide-for-desktop">
+            <div class="mobilewholefootercontainer">
+                <div class="mobileonmyway">
+                    <img src="assets/onmyway.jpg" alt="On My Way Pre-k" class="mobileonmywayimage">
+                </div>
+                <div class="mobilepathstoquality">
+                    <img src="assets/pathstoquality.jpg" alt="Paths To Quality" class="mobilepathsimage">
+                </div>
+                <div class="mobileenrollmentfax">
+                   <a href="/learn-more.html" class="mobileenrollmentbutton">Enrollment</a>
+                     <div class="mobilefaxingnumber">Fax Number: 812-518-3449</div>
+                </div>
+                <div class="mobilesocialmediaicons">
+                 <a href="https://www.facebook.com/groups/480383766662011/about" class="fa fa-facebook"></a>
+                </div>
+                <div class="copyright">
+                    Copyright 2013. Kindergate Developmental Childcare, INC.. All rights
+                    reserved.
+                  </div>
+                
+                
+            </div>
+           </div>
+    </div>
+
+    <script src="/scripts/employ.js">
+    
+    </script>
+  </body>
+</html>
