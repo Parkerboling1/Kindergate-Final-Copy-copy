@@ -1,32 +1,6 @@
 
 
-function disableScroll() {
-  // Get the current page scroll position
-  scrollTop = window.scrollTo(0,0);
-  scrollLeft = window.scrollTo(0,0);
 
-      // if any scroll is attempted, set this to the previous value
-      window.onscroll = function() {
-          window.scrollTo(scrollLeft, scrollTop);
-      };
-}
-
-function enableScroll() {
-  window.onscroll = function() {};
-}
-
-var checkbox = document.querySelector("input[name=checkboxlistener]");
-
-checkbox.addEventListener('change', function() {
-
-  if (this.checked) {
-    window.scrollTo(0,0);
-    disableScroll();
-  } else {
-    enableScroll();
-    document.getElementById("mobilecheckbox").checked = false;
-    }
-});
 
 // Simulate a click on the button
 
@@ -50,7 +24,33 @@ let slideIndex = 1;
   showSlides(slideIndex);
 
 
- 
+  function disableScroll() {
+    // Get the current page scroll position
+    scrollTop = window.scrollTo(0,0);
+    scrollLeft = window.scrollTo(0,0);
+  
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+  }
+  
+  function enableScroll() {
+    window.onscroll = function() {};
+  }
+  
+  var checkbox = document.querySelector("input[name=checkboxlistener]");
+  
+  checkbox.addEventListener('change', function() {
+  
+    if (this.checked) {
+      window.scrollTo(0,0);
+      disableScroll();
+    } else {
+      enableScroll();
+      document.getElementById("mobilecheckbox").checked = false;
+      }
+  });
   
 
 
